@@ -22,6 +22,11 @@ services:
       FTLCONF_webserver_api_password: ${PIHOLE_WEBSERVER_PASSWORD}
       # If using Docker's default `bridge` network setting the dns listening mode should be set to 'ALL'
       FTLCONF_dns_listeningMode: 'ALL'
+      # Keep query history in the container's in-memory shared memory filesystem
+      # FTLCONF_files_database: '/dev/shm/pihole-FTL.db'
+      FTLCONF_database_DBinterval: '3600'
+      FTLCONF_database_maxDBdays: '7'
+    # shm_size: '512mb'
     # Volumes store your data between container upgrades
     volumes:
       # For persisting Pi-hole's databases and common configuration file
