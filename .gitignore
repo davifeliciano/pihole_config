@@ -4,6 +4,8 @@
 !.env.example
 
 # Pi-hole runtime state and generated data
+etc-pihole/dnsmasq.conf
+etc-pihole/pihole.toml
 etc-pihole/cli_pw
 etc-pihole/dhcp.leases
 etc-pihole/gravity.db
